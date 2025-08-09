@@ -51,12 +51,27 @@ const oceanTheme = {
   shadow: "#000000",
 };
 
+// ✅ New blue & white theme
+const blueTheme = {
+  primary: "#007BFF", // Main blue
+  background: "#FFFFFF", // White background
+  text: "#0A0A0A", // Dark text
+  border: "#007BFF", // Blue borders
+  white: "#FFFFFF", // White
+  textLight: "#6C757D", // Soft gray text
+  expense: "#FF3B30", // Red for errors
+  income: "#28A745", // Green for income
+  card: "#FFFFFF",
+  shadow: "#000000",
+};
+
 export const THEMES = {
   coffee: coffeeTheme,
   forest: forestTheme,
   purple: purpleTheme,
   ocean: oceanTheme,
+  blue: blueTheme, // Added here
 };
 
-// 👇 change this to switch theme
-export const COLORS = THEMES.coffee;
+// 👇 set default theme to blue
+export const COLORS = THEMES.blue;

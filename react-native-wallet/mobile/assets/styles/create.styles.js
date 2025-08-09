@@ -5,7 +5,7 @@ import { COLORS } from "../../constants/colors";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.background,
+    backgroundColor: COLORS.background, // white
   },
   header: {
     flexDirection: "row",
@@ -13,12 +13,12 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     padding: 20,
     borderBottomWidth: 1,
-    borderBottomColor: COLORS.border,
+    borderBottomColor: COLORS.border, // blue border
   },
   headerTitle: {
     fontSize: 18,
     fontWeight: "600",
-    color: COLORS.text,
+    color: COLORS.primary, // blue title
   },
   backButton: {
     padding: 5,
@@ -33,17 +33,17 @@ export const styles = StyleSheet.create({
   },
   saveButton: {
     fontSize: 16,
-    color: COLORS.primary,
+    color: COLORS.primary, // blue save button
     fontWeight: "600",
   },
   card: {
-    backgroundColor: COLORS.card,
+    backgroundColor: COLORS.card, // white card
     margin: 16,
     borderRadius: 16,
     padding: 16,
-    shadowColor: "#000",
+    shadowColor: COLORS.shadow,
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.08,
     shadowRadius: 4,
     elevation: 3,
   },
@@ -60,48 +60,49 @@ export const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 25,
     borderWidth: 1,
-    borderColor: COLORS.border,
+    borderColor: COLORS.border, // blue border
+    backgroundColor: COLORS.white,
   },
   typeButtonActive: {
-    backgroundColor: COLORS.primary,
+    backgroundColor: COLORS.primary, // blue background when active
     borderColor: COLORS.primary,
   },
   typeIcon: {
     marginRight: 8,
   },
   typeButtonText: {
-    color: COLORS.text,
+    color: COLORS.text, // default dark text
     fontSize: 16,
     fontWeight: "500",
   },
   typeButtonTextActive: {
-    color: COLORS.white,
+    color: COLORS.white, // white text on blue
   },
   amountContainer: {
     flexDirection: "row",
     alignItems: "center",
     borderBottomWidth: 1,
-    borderBottomColor: COLORS.border,
+    borderBottomColor: COLORS.border, // blue underline
     paddingBottom: 16,
     marginBottom: 20,
   },
   currencySymbol: {
     fontSize: 32,
     fontWeight: "bold",
-    color: COLORS.text,
+    color: COLORS.primary, // blue symbol
     marginRight: 8,
   },
   amountInput: {
     flex: 1,
     fontSize: 36,
     fontWeight: "bold",
-    color: COLORS.text,
+    color: COLORS.text, // dark text
   },
   inputContainer: {
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: COLORS.border,
+    borderColor: COLORS.border, // blue border
     borderRadius: 12,
     padding: 4,
     marginBottom: 20,
@@ -119,7 +120,7 @@ export const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 18,
     fontWeight: "600",
-    color: COLORS.text,
+    color: COLORS.primary, // blue section title
     marginBottom: 15,
     marginTop: 10,
     flexDirection: "row",
@@ -137,11 +138,11 @@ export const styles = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: COLORS.border,
+    borderColor: COLORS.border, // blue border
     backgroundColor: COLORS.white,
   },
   categoryButtonActive: {
-    backgroundColor: COLORS.primary,
+    backgroundColor: COLORS.primary, // blue background
     borderColor: COLORS.primary,
   },
   categoryIcon: {
@@ -152,7 +153,7 @@ export const styles = StyleSheet.create({
     fontSize: 14,
   },
   categoryButtonTextActive: {
-    color: COLORS.white,
+    color: COLORS.white, // white on blue
   },
   loadingContainer: {
     padding: 20,

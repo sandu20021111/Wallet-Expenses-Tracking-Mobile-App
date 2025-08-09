@@ -17,7 +17,7 @@ export async function createTransaction(req, res) {
   try {
     const { title, amount, category, user_id } = req.body;
 
-    if (!title || !user_id || !category || !amount === undefined) {
+    if (!title || !user_id || !category || amount === undefined) {
       return res.status(400).json({ error: "All fields are required" });
     }
 
@@ -29,6 +29,47 @@ export async function createTransaction(req, res) {
   } catch (error) {
     console.log("Error inserting transaction:", error);
     res.status(500).json({ error: "Failed to insert transaction" });
+  }
+}
+
+export async function updateTransaction(req, res) {
+  const { id } = req.params;
+  const { title, amount, category } = req.body;
+
+  try {
+    if (isNaN(parseInt(id))) {
+      return res.status(400).json({ error: "Invalid transaction ID" });
+    }
+
+    // Optional: validate fields exist if you want to require them all or allow partial updates
+    if (!title && amount === undefined && !category) {
+      return res
+        .status(400)
+        .json({ error: "At least one field must be provided for update" });
+    }
+
+    // Fetch existing transaction
+    const existing = await sql`SELECT * FROM transactions WHERE id = ${id}`;
+    if (existing.length === 0) {
+      return res.status(404).json({ error: "Transaction not found" });
+    }
+
+    // Use existing values if new ones aren't provided (partial update)
+    const updatedTitle = title ?? existing[0].title;
+    const updatedAmount = amount !== undefined ? amount : existing[0].amount;
+    const updatedCategory = category ?? existing[0].category;
+
+    const result = await sql`
+      UPDATE transactions
+      SET title = ${updatedTitle}, amount = ${updatedAmount}, category = ${updatedCategory}
+      WHERE id = ${id}
+      RETURNING *
+    `;
+
+    res.status(200).json(result[0]);
+  } catch (error) {
+    console.log("Error updating transaction:", error);
+    res.status(500).json({ error: "Failed to update transaction" });
   }
 }
 

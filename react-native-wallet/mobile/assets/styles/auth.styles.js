@@ -5,7 +5,7 @@ import { COLORS } from "../../constants/colors";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.background,
+    backgroundColor: COLORS.background, // white background
     padding: 20,
     justifyContent: "center",
   },
@@ -17,25 +17,25 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: "bold",
-    color: COLORS.text,
+    color: COLORS.primary, // blue title
     marginVertical: 15,
     textAlign: "center",
   },
   input: {
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.white, // white input field
     borderRadius: 12,
     padding: 15,
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: COLORS.border,
+    borderColor: COLORS.primary, // blue border
     fontSize: 16,
-    color: COLORS.text,
+    color: COLORS.textDark, // dark text
   },
   errorInput: {
-    borderColor: COLORS.expense,
+    borderColor: COLORS.error, // red for errors
   },
   button: {
-    backgroundColor: COLORS.primary,
+    backgroundColor: COLORS.primary, // blue button
     borderRadius: 12,
     padding: 16,
     alignItems: "center",
@@ -43,7 +43,7 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
   },
   buttonText: {
-    color: COLORS.white,
+    color: COLORS.white, // white text on blue button
     fontSize: 18,
     fontWeight: "600",
   },
@@ -54,17 +54,17 @@ export const styles = StyleSheet.create({
     gap: 8,
   },
   footerText: {
-    color: COLORS.text,
+    color: COLORS.textLight, // lighter text for footer
     fontSize: 16,
   },
   linkText: {
-    color: COLORS.primary,
+    color: COLORS.primary, // blue link
     fontSize: 16,
     fontWeight: "600",
   },
   verificationContainer: {
     flex: 1,
-    backgroundColor: COLORS.background,
+    backgroundColor: COLORS.background, // white
     padding: 20,
     justifyContent: "center",
     alignItems: "center",
@@ -72,7 +72,7 @@ export const styles = StyleSheet.create({
   verificationTitle: {
     fontSize: 24,
     fontWeight: "bold",
-    color: COLORS.text,
+    color: COLORS.primary, // blue
     marginBottom: 20,
     textAlign: "center",
   },
@@ -82,28 +82,28 @@ export const styles = StyleSheet.create({
     padding: 15,
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: COLORS.border,
+    borderColor: COLORS.primary, // blue border
     fontSize: 16,
-    color: COLORS.text,
+    color: COLORS.textDark,
     width: "100%",
     textAlign: "center",
     letterSpacing: 2,
   },
 
-  // 🔴 Error styles
+  // Error styles
   errorBox: {
-    backgroundColor: "#FFE5E5",
+    backgroundColor: "#EAF4FF", // light blue background
     padding: 12,
     borderRadius: 8,
     borderLeftWidth: 4,
-    borderLeftColor: COLORS.expense,
+    borderLeftColor: COLORS.error, // red stripe for errors
     marginBottom: 16,
     flexDirection: "row",
     alignItems: "center",
     width: "100%",
   },
   errorText: {
-    color: COLORS.text,
+    color: COLORS.error, // red text
     marginLeft: 8,
     flex: 1,
     fontSize: 14,
