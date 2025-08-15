@@ -1,77 +1,127 @@
-// constants/colors.js
-const coffeeTheme = {
-  primary: "#8B593E",
-  background: "#FFF8F3",
-  text: "#4A3428",
-  border: "#E5D3B7",
-  white: "#FFFFFF",
-  textLight: "#9A8478",
-  expense: "#E74C3C",
-  income: "#2ECC71",
-  card: "#FFFFFF",
-  shadow: "#000000",
-};
+import { StyleSheet } from "react-native";
+import { COLORS } from "../../constants/colors";
 
-const forestTheme = {
-  primary: "#2E7D32",
-  background: "#E8F5E9",
-  text: "#1B5E20",
-  border: "#C8E6C9",
-  white: "#FFFFFF",
-  textLight: "#66BB6A",
-  expense: "#C62828",
-  income: "#388E3C",
-  card: "#FFFFFF",
-  shadow: "#000000",
-};
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: COLORS.background,
+    paddingHorizontal: 20,
+    paddingTop: 50,
+  },
+  header: {
+    flexDirection: "row", // put welcome text & logout button in a row
+    justifyContent: "space-between", // space them apart
+    alignItems: "center",
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    backgroundColor: COLORS.primary, // optional background
+    borderRadius: 8, // optional rounded edges
+    marginBottom: 20,
+  },
+  welcomeText: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#fff", // make it stand out on colored background
+  },
+  balanceCard: {
+    backgroundColor: COLORS.card,
+    borderRadius: 20,
+    padding: 20,
+    marginBottom: 20,
+    elevation: 3,
+  },
+  balanceLabel: {
+    fontSize: 16,
+    color: COLORS.textLight,
+  },
+  balanceValue: {
+    fontSize: 28,
+    fontWeight: "bold",
+    marginVertical: 10,
+    color: COLORS.textDark,
+  },
+  balanceRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  incomeText: { color: COLORS.income, fontWeight: "500" },
+  expenseText: { color: COLORS.expense, fontWeight: "500" },
+  quickActions: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 20,
+  },
+  actionButton: {
+    backgroundColor: COLORS.card,
+    borderRadius: 15,
+    padding: 15,
+    alignItems: "center",
+    flex: 0.48,
+  },
+  actionText: {
+    marginTop: 5,
+    color: COLORS.textDark,
+    fontWeight: "500",
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: "600",
+    marginBottom: 10,
+    color: COLORS.textDark,
+  },
+  transactionItem: {
+    backgroundColor: COLORS.card,
+    padding: 15,
+    borderRadius: 15,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 10,
+  },
+  transactionTitle: {
+    fontSize: 16,
+    fontWeight: "500",
+    color: COLORS.textDark,
+  },
+  transactionDate: {
+    fontSize: 12,
+    color: COLORS.textLight,
+  },
+  transactionAmount: {
+    fontSize: 16,
+    fontWeight: "600",
+  },
 
-const purpleTheme = {
-  primary: "#6A1B9A",
-  background: "#F3E5F5",
-  text: "#4A148C",
-  border: "#D1C4E9",
-  white: "#FFFFFF",
-  textLight: "#BA68C8",
-  expense: "#D32F2F",
-  income: "#388E3C",
-  card: "#FFFFFF",
-  shadow: "#000000",
-};
-
-const oceanTheme = {
-  primary: "#0277BD",
-  background: "#E1F5FE",
-  text: "#01579B",
-  border: "#B3E5FC",
-  white: "#FFFFFF",
-  textLight: "#4FC3F7",
-  expense: "#EF5350",
-  income: "#26A69A",
-  card: "#FFFFFF",
-  shadow: "#000000",
-};
-
-// ✅ New Blue & White Theme
-const blueTheme = {
-  primary: "#007BFF", // Main blue
-  background: "#FFFFFF", // White background
-  text: "#0A0A0A", // Dark text
-  border: "#007BFF", // Blue borders
-  white: "#FFFFFF", // White
-  textLight: "#6C757D", // Soft gray
-  expense: "#FF3B30", // Red for errors
-  income: "#28A745", // Green for income
-  card: "#FFFFFF",
-  shadow: "#000000",
-};
-
-export const THEMES = {
-  coffee: coffeeTheme,
-  forest: forestTheme,
-  purple: purpleTheme,
-  ocean: oceanTheme,
-  blue: blueTheme, // Added new theme
-};
-
-// 👇 Default theme set to blue
-export const COLORS = THEMES.blue;
+  /* ----------------------------
+     Add Income / Expense Form Styles
+  ---------------------------- */
+  input: {
+    backgroundColor: "#fff",
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 12,
+    fontSize: 16,
+    marginBottom: 16,
+    shadowColor: "#000",
+    shadowOpacity: 0.05,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  button: {
+    paddingVertical: 14,
+    borderRadius: 12,
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: "#000",
+    shadowOpacity: 0.08,
+    shadowOffset: { width: 0, height: 4 },
+    shadowRadius: 6,
+    elevation: 3,
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "700",
+  },
+});
