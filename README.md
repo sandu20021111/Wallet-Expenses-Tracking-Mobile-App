@@ -24,5 +24,7 @@ I just launched my **first cross-platform finance tracker app** built with **Rea
 - **Backend (Planned):** Express + PostgreSQL  
 
 ---
-
+## 📬 Contact
+- 📧 **sandunivihara228@gmail.com**
+- 🔗 **https://www.linkedin.com/in/sanduni-vihara-56990528b**
 
